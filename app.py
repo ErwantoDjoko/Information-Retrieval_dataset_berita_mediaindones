@@ -10,10 +10,9 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 
 # --- Unduh resource NLTK ---
-try:
-    nltk.data.find("tokenizers/punkt")
-except LookupError:
-    nltk.download("punkt")
+nltk.download('punkt')
+nltk.download('stopwords')
+
 # --- Preprocessing ---
 stop_words = set(stopwords.words('indonesian'))
 
