@@ -1,3 +1,9 @@
+import subprocess
+import sys
+
+# Mengupgrade pip secara otomatis
+subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
+
 import streamlit as st
 import json
 import re

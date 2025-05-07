@@ -2,4 +2,4 @@ streamlit
 pandas
 ntlk
 scikit-learn
-
+pip>=23.0.0  # Tambahkan versi pip terbaru jika perlu
