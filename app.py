@@ -8,10 +8,12 @@ from nltk.tokenize import word_tokenize
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# --- Unduh resource NLTK ---
-nltk.download('punkt')
-nltk.download('stopwords')
 
+# --- Unduh resource NLTK ---
+try:
+    nltk.data.find("tokenizers/punkt")
+except LookupError:
+    nltk.download("punkt")
 # --- Preprocessing ---
 stop_words = set(stopwords.words('indonesian'))
 
