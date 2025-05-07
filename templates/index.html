@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencarian Berita</title>
+</head>
+<body>
+    <h1>Pencarian Berita</h1>
+    <form method="POST">
+        <input type="text" name="query" value="{{ query }}" placeholder="Cari berita..." required>
+        <button type="submit">Cari</button>
+    </form>
+
+    {% if results %}
+        <h2>Hasil Pencarian</h2>
+        <ul>
+            {% for result in results %}
+                <li>
+                    <h3><a href="#" target="_blank">{{ result.title }}</a></h3>
+                    <p><strong>Domain:</strong> {{ result.domain }} | <strong>Tanggal:</strong> {{ result.publish_date }}</p>
+                    <p><em>{{ result.snippet }}...</em></p>
+                    <p><strong>Skor:</strong> {{ result.score }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>Tidak ada hasil yang ditemukan.</p>
+    {% endif %}
+</body>
+</html>

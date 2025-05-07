@@ -1,0 +1,5 @@
+Flask is a micro web framework written in Python.
+Latent Dirichlet Allocation is used for topic modeling.
+TF-IDF stands for term frequency-inverse document frequency.
+Information retrieval is about searching in documents.
+Python is widely used in natural language processing.
