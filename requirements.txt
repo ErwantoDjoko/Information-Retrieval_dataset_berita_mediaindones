@@ -1,4 +1,5 @@
 streamlit
 pandas
-nltk==3.6.3
-scikit-learn==0.24.2 
+ntlk
+scikit-learn
+
